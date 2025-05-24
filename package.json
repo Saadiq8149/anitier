@@ -1,5 +1,6 @@
 {
   "name": "anitier",
+  "homepage": "https://Saadiq8149.github.io/anitier/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,11 +8,13 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "depoly": "gh-pages -d dist"
   },
   "dependencies": {
     "dom-to-image": "^2.6.0",
-    "dotenv": "^16.5.0",
+    "gh-pages": "^6.3.0",
     "html-to-image": "^1.11.13",
     "lz-string": "^1.5.0",
     "react": "^19.1.0",
@@ -19,7 +22,6 @@
     "react-dnd": "^16.0.1",
     "react-dnd-html5-backend": "^16.0.1",
     "react-dom": "^19.1.0",
-    "react-scripts": "^5.0.1",
     "react-sortablejs": "^6.1.4",
     "sortablejs": "^1.15.6",
     "use-local-storage": "^3.0.0"
