@@ -345,7 +345,7 @@ export default function Main() {
             if (data.tiers && Array.isArray(data.tiers)) {
                 setTierList(data.tiers);
                 setTierListName(name)
-                window.location = 'https://anitier-seven.vercel.app/'
+                window.location = 'https://saadiq8149.github.io/anitier/'
             }
             } catch (error) {
             console.error("Failed to parse tier list data", error);
@@ -394,7 +394,7 @@ export default function Main() {
                     const name = json.data.Viewer.name
                     console.log(token, id)
                     localStorage.setItem("auth", JSON.stringify({token: token, id: id, name: name}))
-                    window.location = 'https://anitier-seven.vercel.app/'
+                    window.location = 'https://saadiq8149.github.io/anitier/'
                 }
             })
         }
@@ -410,12 +410,12 @@ export default function Main() {
                         {
                             auth.token == null ?
                             <a className="anilist-tier-btn" href={`https://anilist.co/api/v2/oauth/authorize?client_id=${ANILIST_CLIENT_ID}&response_type=token`}>
-                            <img className="anilist-tier-btn__icon" src="/anilist_logo_transparent.png"/>
+                            {/* <img className="anilist-tier-btn__icon" src="/anilist_logo_transparent.png"/> */}
                                 Login to <span>AniList</span>
                             </a>
                             :
                             <button className="anilist-tier-btn" onClick={() => getUserAnimeList()}>
-                            <img className="anilist-tier-btn__icon" src="/anilist_logo_transparent.png"/>
+                            {/* <img className="anilist-tier-btn__icon" src="/anilist_logo_transparent.png"/> */}
                                 Load your <span>Animelist</span>
                             </button>
                         }
