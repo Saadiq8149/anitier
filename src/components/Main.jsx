@@ -668,24 +668,24 @@ export default function Main() {
         )
     } else {
         return (
-        <main className="main">
-            <div className="tierlist-container" style={{ maxWidth: '100%', padding: '1rem' }}>
-                <div className="tierlist-header" style={{ marginBottom: '2rem' }}>
-                    <div className="tierlist-title">{tierListName}</div>
-                    <div className="tier-actions">
-                        <button
-                            className="btn btn-outline"
-                            onClick={() => setViewListMode(false)}
-                            style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}
-                        >
-                            <svg className="icon" viewBox="0 0 24 24" width="18" height="18">
-                                <path fill="currentColor" d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
-                            </svg>
-                            Back to Editor
-                        </button>
+            <main className="main">
+                <div className="tierlist-container" style={{ maxWidth: '100%', padding: '1rem' }}>
+                    <div className="tierlist-header" style={{ marginBottom: '2rem' }}>
+                        <div className="tierlist-title">{tierListName}</div>
+                        <div className="tier-actions">
+                            <button
+                                className="btn btn-outline"
+                                onClick={() => setViewListMode(false)}
+                                style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}
+                            >
+                                <svg className="icon" viewBox="0 0 24 24" width="18" height="18">
+                                    <path fill="currentColor" d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+                                </svg>
+                                Back to Editor
+                            </button>
+                        </div>
                     </div>
-                </div>
-                {
+                    {
                         tierList.map((tier, index) => {
                             return (
                                 <div className="tier-row" key={index}>
@@ -714,8 +714,68 @@ export default function Main() {
                         })
                     }
 
-            </div>
-        </main>
-    )
+                    <div className="tierlist-footer" style={{
+                        marginTop: '2rem',
+                        padding: '1rem',
+                        background: 'var(--darker-bg)',
+                        borderRadius: '6px',
+                        border: '1px solid var(--border)',
+                        textAlign: 'center',
+                        maxWidth: '600px',
+                        marginLeft: 'auto',
+                        marginRight: 'auto'
+                    }}>
+                        <div style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            gap: '0.5rem',
+                            marginBottom: '0.5rem'
+                        }}>
+                            <span style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
+                                Save your tier list as an image with
+                            </span>
+                            <a
+                                href="https://chromewebstore.google.com/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{
+                                    color: 'var(--accent)',
+                                    fontWeight: '500',
+                                    textDecoration: 'none',
+                                    display: 'inline-flex',
+                                    alignItems: 'center',
+                                    gap: '0.25rem'
+                                }}
+                            >
+                                GoFullPage
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                            </a>
+                            <span style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
+                                Extension
+                            </span>
+                        </div>
+                        <div style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            gap: '0.25rem',
+                            color: 'var(--text-secondary)',
+                            fontSize: '0.8rem'
+                        }}>
+                            <span>Show lots of love </span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="#ff6b6b" stroke="none">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                            </svg>
+                            <span>to extension creator</span>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        )
     }
 }
