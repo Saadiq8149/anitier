@@ -313,6 +313,8 @@ main {
 }
 
 .tierlist-title {
+    display: flex;
+    gap: 0.6rem;
     font-size: 1.4rem;
     font-weight: 700;
     background: linear-gradient(to right, #ffffff, #d0c0ff);
